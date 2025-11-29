@@ -3,25 +3,32 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import axios from 'axios';
 import L from 'leaflet';
 import { connectSocket, disconnectSocket } from '../lib/socket';
+import { assignRequest } from '../lib/api';
+import CreateRequestModal from '../components/CreateRequestModal';
 
-
-// Fix for default marker icon in Leaflet with Webpack/Vite
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-
-let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow,
+// Custom Icons
+const createIcon = (color) => new L.Icon({
+    iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
-    iconAnchor: [12, 41]
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
 
-L.Marker.prototype.options.icon = DefaultIcon;
+const icons = {
+    'Help Needed': createIcon('blue'), // Default
+    'Resource Available': createIcon('green'),
+    'Emergency': createIcon('red'),
+    'Community Event': createIcon('orange'),
+    'default': createIcon('blue')
+};
 
 function MapPage() {
     const [position, setPosition] = useState(null);
     const [requests, setRequests] = useState([]);
     const [toast, setToast] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         // Connect socket
@@ -46,7 +53,6 @@ function MapPage() {
                 },
                 (err) => {
                     console.error("Error getting location:", err);
-                    // Fallback location (e.g., London) if permission denied
                     setPosition([51.505, -0.09]);
                     fetchRequests(51.505, -0.09);
                 }
@@ -72,19 +78,34 @@ function MapPage() {
         }
     };
 
+    const handleAssign = async (id) => {
+        try {
+            await assignRequest(id);
+            setToast('Thanks for volunteering!');
+            setTimeout(() => setToast(null), 3000);
+            // Refresh requests to show updated status
+            if (position) {
+                fetchRequests(position[0], position[1]);
+            }
+        } catch (error) {
+            console.error("Assign error:", error);
+            setToast(`Error: ${error.message}`);
+            setTimeout(() => setToast(null), 3000);
+        }
+    };
+
     if (!position) {
-        return <div>Loading location...</div>;
+        return <div className="flex items-center justify-center h-screen text-xl">Loading location...</div>;
     }
 
     return (
-        <div style={{ height: '100vh', width: '100vw' }}>
+        <div className="h-screen w-screen relative">
             <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                {/* User's current location marker */}
                 <Marker position={position}>
                     <Popup>
                         You are here
@@ -95,31 +116,47 @@ function MapPage() {
                     <Marker
                         key={req._id}
                         position={[req.location.coordinates[1], req.location.coordinates[0]]}
+                        icon={icons[req.type] || icons['default']}
                     >
                         <Popup>
-                            <div>
-                                <h3>{req.type}</h3>
-                                <p>{req.description}</p>
-                                {req.contact && <p><strong>Contact:</strong> {req.contact}</p>}
+                            <div className="p-2 min-w-[200px]">
+                                <h3 className="font-bold text-lg mb-1">{req.type}</h3>
+                                <p className="text-gray-700 mb-2">{req.description}</p>
+                                {req.contact && <p className="text-sm text-gray-600 mb-2"><strong>Contact:</strong> {req.contact}</p>}
+                                <p className="text-xs text-gray-500 mb-3">Status: <span className="font-semibold capitalize">{req.status}</span></p>
+
+                                {req.status === 'open' && (
+                                    <button
+                                        onClick={() => handleAssign(req._id)}
+                                        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded text-sm transition-colors"
+                                    >
+                                        I'll help
+                                    </button>
+                                )}
                             </div>
                         </Popup>
                     </Marker>
                 ))}
             </MapContainer>
 
+            <button
+                onClick={() => setIsModalOpen(true)}
+                className="absolute bottom-5 right-5 z-[1000] bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform hover:scale-105"
+            >
+                + Request Help
+            </button>
+
+            {isModalOpen && (
+                <CreateRequestModal
+                    onClose={() => setIsModalOpen(false)}
+                    onCreated={() => {
+                        if (position) fetchRequests(position[0], position[1]);
+                    }}
+                />
+            )}
+
             {toast && (
-                <div style={{
-                    position: 'fixed',
-                    bottom: '20px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    backgroundColor: '#333',
-                    color: 'white',
-                    padding: '10px 20px',
-                    borderRadius: '5px',
-                    zIndex: 2000,
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
-                }}>
+                <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-xl z-[2000] animate-fade-in-up">
                     {toast}
                 </div>
             )}

@@ -22,11 +22,6 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
-// Database Connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/neighbournet')
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.error('MongoDB Connection Error:', err));
-
 // User Socket Mapping
 const userSocketMap = new Map(); // userId -> socketId
 
@@ -65,8 +60,15 @@ app.use('/api/auth', authRoutes);
 app.use('/api/requests', requestRoutes);
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
-module.exports = { io, userSocketMap };
+if (require.main === module) {
+  mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/neighbournet')
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.error('MongoDB Connection Error:', err));
+
+  server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+module.exports = { io, userSocketMap, app };

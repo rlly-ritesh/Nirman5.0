@@ -3,17 +3,16 @@ version: '3.8'
 services:
   mongo:
     image: mongo:latest
-    ports:
-      - "27017:27017"
     volumes:
       - mongo-data:/data/db
+    ports:
+      - "27017:27017"
 
   backend:
     build: ./backend
     ports:
       - "3000:3000"
     environment:
-      - PORT=3000
       - MONGO_URI=mongodb://mongo:27017/neighbournet
       - JWT_SECRET=devsecret
     depends_on:

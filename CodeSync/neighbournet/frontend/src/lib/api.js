@@ -49,6 +49,12 @@ export const createRequest = (payload) => {
   });
 };
 
+export const assignRequest = (id) => {
+  return apiFetch(`/requests/${id}/assign`, {
+    method: 'POST',
+  });
+};
+
 /*
 // Example Usage:
 

@@ -67,4 +67,31 @@ router.post('/', authenticateToken, async (req, res) => {
     }
 });
 
+// POST /requests/:id/assign
+router.post('/:id/assign', authenticateToken, async (req, res) => {
+    try {
+        const request = await Request.findById(req.params.id);
+        if (!request) {
+            return res.status(404).json({ error: 'Request not found' });
+        }
+
+        if (request.status !== 'open') {
+            return res.status(400).json({ error: 'Request is already assigned or completed' });
+        }
+
+        if (request.requesterId.toString() === req.user.userId) {
+            return res.status(400).json({ error: 'You cannot assign yourself to your own request' });
+        }
+
+        request.assignedTo = req.user.userId;
+        request.status = 'assigned';
+        await request.save();
+
+        res.json(request);
+    } catch (error) {
+        console.error('Assign Request Error:', error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;
