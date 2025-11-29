@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMesh - Peer Community </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            MINDMESH
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="peer.html">Peer Community</a></li>
+            <li><a href="counsel.html">Counsellors</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Peer Community</h1>
+        <p>Share your thoughts, support others, and grow together in a safe space 🌸</p>
+    </section>
+
+    <main>
+        <section class="story-section">
+            <div class="view-story">
+                <h2>View Story</h2>
+                <select>
+                    <option>All</option>
+                    <option>Age</option>
+                    <option>Severity</option>
+                    <option>Category</option>
+                </select>
+                <div id="story-list"></div>
+            </div>
+            <div class="post-story">
+                <h2>Post Story</h2>
+                <form id="storyForm">
+                    <textarea placeholder="Share your story..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Feed -->
+    <section class="feed">
+        <div class="post">
+            <h3>Anonymous</h3>
+            <p>Feeling anxious before exams 😓 Any tips to stay calm?</p>
+            <div class="actions">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-share"></i>
+            </div>
+        </div>
+        <div class="post">
+            <h3>Ravi</h3>
+            <p>Walking in the park and listening to music helps me relax 🎶🌿</p>
+            <div class="actions">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-share"></i>
+            </div>
+        </div>
+        <div class="post">
+            <h3>Sophia</h3>
+            <p>I started journaling daily — it clears my head and reduces stress ✍️✨</p>
+            <div class="actions">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-share"></i>
+            </div>
+        </div>
+    </section>
+    <!-- Floating Add Post Button -->
+    <div class="floating-btn" onclick="alert('📝 Add New Post Coming Soon!')">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+        <p>© 2025 SIH | Team Innovatrix</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
