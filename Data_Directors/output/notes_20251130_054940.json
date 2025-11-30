@@ -1,0 +1,46 @@
+[
+  {
+    "id": "Laws of Motion",
+    "tags": [
+      "main-category",
+      "laws-of-motion",
+      "newtonian-mechanics"
+    ]
+  },
+  {
+    "id": "Conservation Laws",
+    "tags": [
+      "main-category",
+      "conservation-laws",
+      "energy-momentum-law"
+    ]
+  },
+  {
+    "id": "Types of Forces",
+    "tags": [
+      "main-category",
+      "forces-and-motion",
+      "gravity",
+      "magnetism"
+    ]
+  },
+  {
+    "id": "Waves and Vibrations",
+    "tags": [
+      "main-category",
+      "waves-and-vibrations",
+      "sound-wave",
+      "light-wave"
+    ]
+  },
+  {
+    "id": "Electromagnetism",
+    "tags": [
+      "main-category",
+      "electromagnetism",
+      "electric-field",
+      "magnetic-field",
+      "electricity"
+    ]
+  }
+]

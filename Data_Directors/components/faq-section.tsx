@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 
@@ -65,7 +65,7 @@ export default function FAQSection() {
   return (
     <div className="w-full flex justify-center items-start">
       <div className="flex-1 px-4 md:px-12 py-16 md:py-20 flex flex-col lg:flex-row justify-start items-start gap-6 lg:gap-12">
-        {/* Left Column - Header */}
+        
         <div className="w-full lg:flex-1 flex flex-col justify-center items-start gap-4 lg:py-5">
           <div className="w-full flex flex-col justify-center text-white font-semibold leading-tight md:leading-[44px] font-sans text-4xl tracking-tight">
             <span className="text-gradient-neon">Frequently</span> Asked Questions
@@ -77,7 +77,7 @@ export default function FAQSection() {
           </div>
         </div>
 
-        {/* Right Column - FAQ Items */}
+        
         <div className="w-full lg:flex-1 flex flex-col justify-center items-center">
           <div className="w-full flex flex-col">
             {faqData.map((item, index) => {
@@ -120,3 +120,4 @@ export default function FAQSection() {
     </div>
   )
 }
+

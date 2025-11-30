@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState } from "react"
 
@@ -6,7 +6,7 @@ export default function ProgressPage() {
   const [timeRange, setTimeRange] = useState("week")
 
   const stats = {
-    totalStudyTime: 847, // minutes
+    totalStudyTime: 847, 
     quizzesTaken: 35,
     averageScore: 85,
     flashcardsReviewed: 248,
@@ -125,7 +125,7 @@ export default function ProgressPage() {
                   <div className="text-2xl">
                     {subject.subject === "Physics" && "📘"}
                     {subject.subject === "Chemistry" && "🧪"}
-                    {subject.subject === "Mathematics" && "📐"}
+                    {subject.subject === "Mathematics" && "📝"}
                     {subject.subject === "History" && "🏛️"}
                   </div>
                   <div>
@@ -230,4 +230,5 @@ export default function ProgressPage() {
     </div>
   )
 }
+
 

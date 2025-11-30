@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState, useCallback } from "react"
 import { useRouter } from "next/navigation"
@@ -124,12 +124,12 @@ export default function UploadPage() {
             
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-2xl mb-2">📝</div>
+                <div className="text-2xl mb-2">📓</div>
                 <div className="text-white font-medium">Summary</div>
                 <div className="text-xs text-gray-400">Brief & Detailed</div>
               </div>
               <div className="p-4 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-2xl mb-2">🃏</div>
+                <div className="text-2xl mb-2">🧠</div>
                 <div className="text-white font-medium">Flashcards</div>
                 <div className="text-xs text-gray-400">Auto-generated</div>
               </div>
@@ -181,8 +181,8 @@ export default function UploadPage() {
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               {[
                 { step: "Analyzing PDF", icon: "📄", done: progress > 25 },
-                { step: "Creating Summary", icon: "📝", done: progress > 50 },
-                { step: "Generating Cards", icon: "🃏", done: progress > 75 },
+                { step: "Creating Summary", icon: "📓", done: progress > 50 },
+                { step: "Generating Cards", icon: "🧠", done: progress > 75 },
                 { step: "Building Quiz", icon: "✅", done: progress === 100 },
               ].map((item, i) => (
                 <div key={i} className={`p-3 rounded-lg ${item.done ? "bg-green-500/20" : "bg-white/5"}`}>
@@ -202,19 +202,19 @@ export default function UploadPage() {
         </h3>
         <ul className="space-y-2 text-gray-400 text-sm">
           <li className="flex items-start gap-2">
-            <span>✓</span>
+            <span>✔</span>
             <span>Use clear, well-formatted PDF documents</span>
           </li>
           <li className="flex items-start gap-2">
-            <span>✓</span>
+            <span>✔</span>
             <span>Text-based PDFs work better than scanned images</span>
           </li>
           <li className="flex items-start gap-2">
-            <span>✓</span>
+            <span>✔</span>
             <span>Add specific instructions for targeted learning materials</span>
           </li>
           <li className="flex items-start gap-2">
-            <span>✓</span>
+            <span>✔</span>
             <span>Maximum file size: 50MB</span>
           </li>
         </ul>
@@ -222,4 +222,5 @@ export default function UploadPage() {
     </div>
   )
 }
+
 

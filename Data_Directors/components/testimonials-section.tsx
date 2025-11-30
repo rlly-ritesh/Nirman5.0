@@ -1,9 +1,8 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import type React from "react"
 
-// Badge component for consistency
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="px-[14px] py-[6px] dark-card neon-border overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px]">
@@ -55,7 +54,7 @@ export default function TestimonialsSection() {
           setIsTransitioning(false)
         }, 100)
       }, 300)
-    }, 12000) // increased from 6000ms to 12000ms for longer testimonial display
+    }, 12000) 
 
     return () => clearInterval(interval)
   }, [testimonials.length])
@@ -72,9 +71,9 @@ export default function TestimonialsSection() {
 
   return (
     <div className="w-full border-b border-white/10 flex flex-col justify-center items-center">
-      {/* Header Section */}
+      
 
-      {/* Testimonial Content */}
+      
       <div className="self-stretch px-2 overflow-hidden flex justify-start items-center bg-background border border-b border-l-0 border-r-0 border-t-0">
         <div className="flex-1 py-16 md:py-17 flex flex-col md:flex-row justify-center items-end gap-6">
           <div className="self-stretch px-3 md:px-12 justify-center items-start gap-4 flex flex-col md:flex-row">
@@ -115,7 +114,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
+          
           <div className="pr-6 justify-start items-start gap-[14px] flex">
             <button
               onClick={() => handleNavigationClick((activeTestimonial - 1 + testimonials.length) % testimonials.length)}
@@ -155,3 +154,4 @@ export default function TestimonialsSection() {
     </div>
   )
 }
+

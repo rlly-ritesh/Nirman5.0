@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import type React from "react"
 
@@ -42,7 +42,7 @@ export default function LandingPage() {
           }
           return 0
         }
-        return prev + 2 // 2% every 100ms = 5 seconds total
+        return prev + 2 
       })
     }, 100)
 
@@ -96,7 +96,7 @@ export default function LandingPage() {
               <div className="w-full max-w-[calc(100%-32px)] sm:max-w-[calc(100%-48px)] md:max-w-[calc(100%-64px)] lg:max-w-[700px] lg:w-[700px] h-10 sm:h-11 md:h-12 py-1.5 sm:py-2 px-3 sm:px-4 md:px-4 pr-2 sm:pr-3 dark-card backdrop-blur-xl overflow-hidden rounded-[50px] flex justify-between items-center relative z-30">
                 <div className="flex justify-center items-center">
                   <div className="flex justify-start items-center gap-2">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center overflow-hidden">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center overflow-hidden">
                       <img src="/logopng.png" alt="PadhAI Logo" className="w-full h-full object-contain" />
                     </div>
                     <div className="flex flex-col justify-center text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-5 font-sans">
@@ -209,7 +209,7 @@ export default function LandingPage() {
                           <img
                             src="/data-visualization-dashboard-with-interactive-char.jpg"
                             alt="Data Visualization Dashboard"
-                            className="w-full h-full object-contain" // Changed from object-cover to object-contain to preserve landscape aspect ratio
+                            className="w-full h-full object-contain" 
                           />
                         </div>
                       </div>
@@ -248,7 +248,7 @@ export default function LandingPage() {
                     onClick={() => handleCardClick(1)}
                   />
                   <FeatureCard
-                    title="📊 Smart Dashboards"
+                    title="ðŸ“Š Smart Dashboards"
                     description="Teachers and parents can track progress, create assignments, and monitor learning outcomes."
                     isActive={activeCard === 2}
                     progress={activeCard === 2 ? progress : 0}
@@ -582,4 +582,5 @@ function FeatureCard({
     </div>
   )
 }
+
 

@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState } from "react"
 
@@ -12,11 +12,11 @@ export default function SettingsPage() {
   })
 
   const tabs = [
-    { id: "profile", label: "Profile", icon: "👤" },
-    { id: "preferences", label: "Preferences", icon: "⚙️" },
-    { id: "notifications", label: "Notifications", icon: "🔔" },
-    { id: "privacy", label: "Privacy & Security", icon: "🔒" },
-    { id: "subscription", label: "Subscription", icon: "💳" },
+    { id: "profile", label: "Profile", icon: "ðŸ‘¤" },
+    { id: "preferences", label: "Preferences", icon: "âš™ï¸" },
+    { id: "notifications", label: "Notifications", icon: "ðŸ””" },
+    { id: "privacy", label: "Privacy & Security", icon: "ðŸ”’" },
+    { id: "subscription", label: "Subscription", icon: "ðŸ’³" },
   ]
 
   return (
@@ -125,10 +125,10 @@ export default function SettingsPage() {
                 <label className="block text-white mb-2 font-medium">Language</label>
                 <select className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white">
                   <option>English</option>
-                  <option>हिंदी (Hindi)</option>
-                  <option>বাংলা (Bengali)</option>
-                  <option>தமிழ் (Tamil)</option>
-                  <option>తెలుగు (Telugu)</option>
+                  <option>à¤¹à¤¿à¤‚à¤¦à¥€ (Hindi)</option>
+                  <option>à¦¬à¦¾à¦‚à¦²à¦¾ (Bengali)</option>
+                  <option>à®¤à®®à®¿à®´à¯ (Tamil)</option>
+                  <option>à°¤à±†à°²à±à°—à± (Telugu)</option>
                 </select>
               </div>
               <div>
@@ -347,23 +347,23 @@ export default function SettingsPage() {
                 <h3 className="text-2xl font-bold text-white mb-2">Student Plan (Free)</h3>
                 <p className="text-gray-400">Currently active</p>
               </div>
-              <div className="text-3xl">🎓</div>
+                <div className="text-3xl">🎓</div>
             </div>
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-gray-300">
-                <span className="text-green-400">✓</span> 10 PDF uploads per month
+                <span className="text-green-400">✔</span> 10 PDF uploads per month
               </div>
               <div className="flex items-center gap-2 text-gray-300">
-                <span className="text-green-400">✓</span> Unlimited quizzes and flashcards
+                <span className="text-green-400">✔</span> Unlimited quizzes and flashcards
               </div>
               <div className="flex items-center gap-2 text-gray-300">
-                <span className="text-green-400">✓</span> Kid Mode access
+                <span className="text-green-400">✔</span> Kid Mode access
               </div>
               <div className="flex items-center gap-2 text-gray-400">
-                <span className="text-red-400">✗</span> Advanced analytics
+                <span className="text-red-400">✖</span> Advanced analytics
               </div>
               <div className="flex items-center gap-2 text-gray-400">
-                <span className="text-red-400">✗</span> Priority AI processing
+                <span className="text-red-400">✖</span> Priority AI processing
               </div>
             </div>
             <button className="btn-3d-orange w-full py-3 rounded-lg font-semibold">
@@ -379,11 +379,11 @@ export default function SettingsPage() {
                 <div className="text-xl font-bold text-white mb-2">Teacher Plan</div>
                 <div className="text-3xl font-bold text-gradient-neon mb-4">₹499<span className="text-sm text-gray-400">/month</span></div>
                 <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                  <li>✓ Everything in Student</li>
-                  <li>✓ Classroom management</li>
-                  <li>✓ Assignment creation</li>
-                  <li>✓ Student progress tracking</li>
-                  <li>✓ Advanced analytics</li>
+                  <li>✔ Everything in Student</li>
+                  <li>✔ Classroom management</li>
+                  <li>✔ Assignment creation</li>
+                  <li>✔ Student progress tracking</li>
+                  <li>✔ Advanced analytics</li>
                 </ul>
                 <button className="w-full btn-3d-orange-secondary py-2 rounded-lg font-medium">
                   Select Plan
@@ -394,11 +394,11 @@ export default function SettingsPage() {
                 <div className="text-xl font-bold text-white mb-2">School Plan</div>
                 <div className="text-3xl font-bold text-gradient-neon mb-4">₹2999<span className="text-sm text-gray-400">/month</span></div>
                 <ul className="space-y-2 text-sm text-gray-300 mb-6">
-                  <li>✓ Everything in Teacher</li>
-                  <li>✓ Up to 500 students</li>
-                  <li>✓ Custom gamified modules</li>
-                  <li>✓ Institutional dashboard</li>
-                  <li>✓ Priority support</li>
+                  <li>✔ Everything in Teacher</li>
+                  <li>✔ Up to 500 students</li>
+                  <li>✔ Custom gamified modules</li>
+                  <li>✔ Institutional dashboard</li>
+                  <li>✔ Priority support</li>
                 </ul>
                 <button className="w-full btn-3d-orange-secondary py-2 rounded-lg font-medium">
                   Contact Sales
@@ -418,4 +418,5 @@ export default function SettingsPage() {
     </div>
   )
 }
+
 

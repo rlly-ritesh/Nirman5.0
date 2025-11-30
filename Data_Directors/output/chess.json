@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Chess Board and Pieces",
+    "level": 1,
+    "tags": [
+      "beginner",
+      "foundational"
+    ],
+    "prerequisites": []
+  },
+  {
+    "id": "2",
+    "name": "Basic Movements of Chess Pieces",
+    "level": 1,
+    "tags": [
+      "beginner"
+    ],
+    "prerequisites": [
+      "1"
+    ]
+  },
+  {
+    "id": "3",
+    "name": " Pawn Structure and Moves",
+    "level": 2,
+    "tags": [
+      "intermediate"
+    ],
+    "prerequisites": [
+      "1",
+      "2"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Castling Rules and Tactics",
+    "level": 2,
+    "tags": [
+      "intermediate"
+    ],
+    "prerequisites": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Opening Principles and Common Openings",
+    "level": 3,
+    "tags": [
+      "advanced"
+    ],
+    "prerequisites": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  }
+]

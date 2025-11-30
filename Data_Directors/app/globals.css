@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -51,7 +51,7 @@
   --sidebar-ring: #444444;
   
   
-  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   --font-instrument-serif: "Instrument Serif", ui-serif, serif;
 }
 
@@ -103,6 +103,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
   }
 }
 
@@ -233,6 +234,56 @@
   font-display: swap;
 }
 
+.font-opendyslexic {
+  font-family: 'OpenDyslexic', var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Apply OpenDyslexic font to all elements when dyslexic mode is active */
+html.dyslexic-mode,
+html.dyslexic-mode body,
+html.dyslexic-mode * {
+  font-family: 'OpenDyslexic', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Ensure serif fonts also change in dyslexic mode */
+html.dyslexic-mode .font-serif,
+html.dyslexic-mode .font-instrument-serif {
+  font-family: 'OpenDyslexic', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* OpenDyslexic Font Face */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Bold-Italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
 @supports (font-display: swap) {
   @font-face {
     font-family: "Instrument Serif";
@@ -247,4 +298,5 @@
 .backdrop-blur-custom {
   backdrop-filter: blur(8.25px);
 }
+
 

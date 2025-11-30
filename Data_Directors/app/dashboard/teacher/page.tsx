@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState } from "react"
 
@@ -123,7 +123,7 @@ export default function TeacherDashboard() {
           onClick={() => setShowAssignmentModal(true)}
           className="btn-3d-orange px-6 py-3 rounded-lg font-semibold"
         >
-          ➕ Create Assignment
+        ➕ Create Assignment
         </button>
       </div>
 
@@ -355,4 +355,5 @@ export default function TeacherDashboard() {
     </div>
   )
 }
+
 

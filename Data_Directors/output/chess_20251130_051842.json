@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Chess Board and Pieces",
+    "level": 1,
+    "tags": [
+      "beginner",
+      "foundational"
+    ],
+    "prerequisites": []
+  },
+  {
+    "id": "2",
+    "name": "Movement of Each Chess Piece",
+    "level": 1,
+    "tags": [
+      "beginner"
+    ],
+    "prerequisites": [
+      "1"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Basic Chess Openings",
+    "level": 2,
+    "tags": [
+      "intermediate"
+    ],
+    "prerequisites": [
+      "1",
+      "2"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Chess Tactics and Strategies",
+    "level": 2,
+    "tags": [
+      "intermediate"
+    ],
+    "prerequisites": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Advanced Chess Endgames",
+    "level": 3,
+    "tags": [
+      "advanced"
+    ],
+    "prerequisites": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  }
+]

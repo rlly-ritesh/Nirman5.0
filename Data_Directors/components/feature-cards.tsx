@@ -1,4 +1,4 @@
-export function FeatureCards() {
+﻿export function FeatureCards() {
   const features = [
     {
       title: "Plan your schedules",
@@ -25,7 +25,7 @@ export function FeatureCards() {
             <div
               key={index}
               className={`p-6 flex flex-col gap-2 ${
-                // Updated feature card borders to 1px
+                
                 feature.highlighted ? "bg-white border border-[#e0dedb] shadow-sm" : "border border-[#e0dedb]/80"
               }`}
             >
@@ -44,3 +44,4 @@ export function FeatureCards() {
     </section>
   )
 }
+

@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState, useEffect } from "react"
 
@@ -29,7 +29,7 @@ export default function FlashcardsPage() {
     {
       id: "3",
       question: "What is the quadratic formula?",
-      answer: "x = (-b ± √(b² - 4ac)) / 2a, used to solve equations of the form ax² + bx + c = 0",
+      answer: "x = (-b Â± âˆš(bÂ² - 4ac)) / 2a, used to solve equations of the form axÂ² + bx + c = 0",
       difficulty: "hard",
       subject: "Mathematics",
       mastered: false,
@@ -160,25 +160,25 @@ export default function FlashcardsPage() {
               onClick={handlePrevious}
               className="flex-1 btn-3d-orange-secondary px-6 py-3 rounded-full font-medium"
             >
-              ← Previous
+              â† Previous
             </button>
             <button
               onClick={handleMastered}
               className="btn-3d-orange px-6 py-3 rounded-full font-semibold"
             >
-              ✓ Mastered
+              âœ“ Mastered
             </button>
             <button
               onClick={handleNext}
               className="flex-1 btn-3d-orange-secondary px-6 py-3 rounded-full font-medium"
             >
-              Next →
+              Next â†’
             </button>
           </div>
         </div>
 
         
-        <div className="absolute top-4 right-4 text-4xl animate-pulse">🔄</div>
+        <div className="absolute top-4 right-4 text-4xl animate-pulse">ðŸ”„</div>
       </div>
 
       
@@ -230,11 +230,11 @@ export default function FlashcardsPage() {
             <span>Flip card</span>
           </div>
           <div className="flex items-center gap-2">
-            <kbd className="px-2 py-1 bg-white/10 rounded">←</kbd>
+            <kbd className="px-2 py-1 bg-white/10 rounded">â†</kbd>
             <span>Previous</span>
           </div>
           <div className="flex items-center gap-2">
-            <kbd className="px-2 py-1 bg-white/10 rounded">→</kbd>
+            <kbd className="px-2 py-1 bg-white/10 rounded">â†’</kbd>
             <span>Next</span>
           </div>
           <div className="flex items-center gap-2">
@@ -246,4 +246,5 @@ export default function FlashcardsPage() {
     </div>
   )
 }
+
 

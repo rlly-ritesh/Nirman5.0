@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
@@ -7,7 +7,7 @@ export default function QuizzesPage() {
   const [selectedQuiz, setSelectedQuiz] = useState<string | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({})
-  const [timeLeft, setTimeLeft] = useState(600) // 10 minutes
+  const [timeLeft, setTimeLeft] = useState(600) 
   const [isComplete, setIsComplete] = useState(false)
   const [score, setScore] = useState(0)
 
@@ -37,7 +37,7 @@ export default function QuizzesPage() {
       duration: "12 min",
       difficulty: "medium",
       subject: "Mathematics",
-      icon: "📐",
+      icon: "📝",
     },
   ]
 
@@ -52,7 +52,7 @@ export default function QuizzesPage() {
     {
       id: "2",
       question: "Which formula represents Newton's Second Law?",
-      options: ["F = ma", "E = mc²", "v = d/t", "PV = nRT"],
+      options: ["F = ma", "E = mcÂ²", "v = d/t", "PV = nRT"],
       correctAnswer: 0,
       explanation: "F = ma (Force equals mass times acceleration) is Newton's Second Law.",
     },
@@ -296,12 +296,12 @@ export default function QuizzesPage() {
           disabled={currentQuestion === 0}
           className="btn-3d-orange-secondary px-6 py-3 rounded-full font-medium disabled:opacity-50"
         >
-          ← Previous
+          â† Previous
         </button>
         <div className="flex-1" />
         {currentQuestion < quizQuestions.length - 1 ? (
           <button onClick={handleNext} className="btn-3d-orange px-6 py-3 rounded-full font-semibold">
-            Next →
+            Next â†’
           </button>
         ) : (
           <button onClick={handleSubmit} className="btn-3d-orange px-8 py-3 rounded-full font-semibold">
@@ -334,4 +334,5 @@ export default function QuizzesPage() {
     </div>
   )
 }
+
 

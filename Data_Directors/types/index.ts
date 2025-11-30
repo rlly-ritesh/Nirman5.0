@@ -1,4 +1,4 @@
-// User Types
+﻿
 export interface User {
   id: string
   email: string
@@ -9,7 +9,6 @@ export interface User {
   updatedAt: Date
 }
 
-// Document Types
 export interface Document {
   id: string
   userId: string
@@ -23,7 +22,6 @@ export interface Document {
   updatedAt: Date
 }
 
-// AI Generated Content Types
 export interface Summary {
   id: string
   documentId: string
@@ -79,7 +77,6 @@ export interface UserAnswer {
   isCorrect: boolean
 }
 
-// YouTube Recommendation Types
 export interface VideoRecommendation {
   id: string
   videoId: string
@@ -91,7 +88,6 @@ export interface VideoRecommendation {
   relevanceScore: number
 }
 
-// Kid Mode Types
 export interface KidProfile {
   id: string
   userId: string
@@ -121,7 +117,6 @@ export interface GameSession {
   completedAt: Date
 }
 
-// Dashboard Types
 export interface StudentProgress {
   userId: string
   totalDocuments: number
@@ -153,7 +148,6 @@ export interface Assignment {
   createdAt: Date
 }
 
-// Analytics Types
 export interface ClassroomAnalytics {
   totalStudents: number
   averageScore: number
@@ -177,7 +171,6 @@ export interface TopicMastery {
   totalAttempts: number
 }
 
-// API Response Types
 export interface ApiResponse<T> {
   success: boolean
   data?: T
@@ -193,7 +186,6 @@ export interface PDFProcessingResponse {
   videoRecommendations: VideoRecommendation[]
 }
 
-// Chat/Q&A Types
 export interface ChatMessage {
   id: string
   documentId: string
@@ -202,3 +194,4 @@ export interface ChatMessage {
   answer: string
   timestamp: Date
 }
+

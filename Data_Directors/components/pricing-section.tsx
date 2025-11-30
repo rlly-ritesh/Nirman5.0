@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -13,20 +13,20 @@ export default function PricingSection() {
     },
     professional: {
       monthly: 9.99,
-      annually: 7.99, // 20% discount for annual
+      annually: 7.99, 
     },
     enterprise: {
       monthly: 49.99,
-      annually: 39.99, // 20% discount for annual
+      annually: 39.99, 
     },
   }
 
   return (
     <div className="w-full flex flex-col justify-center items-center gap-2">
-      {/* Header Section */}
+      
       <div className="self-stretch px-6 md:px-24 py-12 md:py-16 border-b border-white/10 flex justify-center items-center gap-6">
         <div className="w-full max-w-[586px] px-4 sm:px-6 py-4 sm:py-5 overflow-hidden rounded-lg flex flex-col justify-start items-center gap-3 sm:gap-4">
-          {/* Pricing Badge */}
+          
           <div className="px-[14px] py-[6px] dark-card neon-border overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px]">
             <div className="w-[14px] h-[14px] relative overflow-hidden flex items-center justify-center">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,12 +44,12 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Title */}
+          
           <div className="self-stretch text-center flex justify-center flex-col text-white text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
             Choose the <span className="text-gradient-neon">perfect plan</span> for your learning
           </div>
 
-          {/* Description */}
+          
           <div className="self-stretch text-center text-gray-400 text-base font-normal leading-7 font-sans">
             Scale your learning with flexible pricing that grows with your needs.
             <br />
@@ -58,12 +58,12 @@ export default function PricingSection() {
         </div>
       </div>
 
-      {/* Billing Toggle Section */}
+      
       <div className="self-stretch px-6 md:px-16 py-9 relative flex justify-center items-center gap-4">
-        {/* Horizontal line */}
+        
         <div className="w-full max-w-[1060px] h-0 absolute left-1/2 transform -translate-x-1/2 top-[63px] border-t border-white/10 z-0"></div>
 
-        {/* Toggle Container */}
+        
         <div className="p-3 relative dark-card backdrop-blur-xl flex justify-center items-center rounded-lg z-20">
           <div className="p-[2px] bg-white/10 rounded-[99px] border-[0.5px] border-white/20 flex justify-center items-center gap-[2px] relative">
             <div
@@ -101,10 +101,10 @@ export default function PricingSection() {
         </div>
       </div>
 
-      {/* Pricing Cards Section */}
+      
       <div className="self-stretch border-b border-t border-white/10 flex justify-center items-center">
         <div className="flex justify-center items-start w-full">
-          {/* Left Decorative Pattern */}
+          
           <div className="w-12 self-stretch relative overflow-hidden hidden md:block">
             <div className="w-[162px] left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
               {Array.from({ length: 200 }).map((_, i) => (
@@ -116,11 +116,11 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Pricing Cards Container */}
+          
           <div className="flex-1 flex flex-col md:flex-row justify-center items-center gap-6 py-12 md:py-0">
-            {/* Starter Plan */}
+            
             <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 dark-card border border-white/10 overflow-hidden flex flex-col justify-start items-start gap-12">
-              {/* Plan Header */}
+              
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="text-white text-lg font-medium leading-7 font-sans">Student</div>
@@ -195,9 +195,9 @@ export default function PricingSection() {
               </div>
             </div>
 
-            {/* Professional Plan (Featured) */}
+            
             <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 dark-card-elevated neon-border neon-glow-purple overflow-hidden flex flex-col justify-start items-start gap-12">
-              {/* Plan Header */}
+              
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="text-white text-lg font-medium leading-7 font-sans flex items-center gap-2">
@@ -241,7 +241,7 @@ export default function PricingSection() {
                   </div>
                 </div>
 
-                {/* CTA Button */}
+                
                 <Button className="self-stretch rounded-full px-4 py-[10px]">
                   <span className="max-w-[108px] text-white text-[13px] font-semibold leading-5 font-sans">Get started</span>
                 </Button>
@@ -276,9 +276,9 @@ export default function PricingSection() {
               </div>
             </div>
 
-            {/* Enterprise Plan */}
+            
             <div className="flex-1 max-w-full md:max-w-none self-stretch px-6 py-5 dark-card border border-white/10 overflow-hidden flex flex-col justify-start items-start gap-12">
-              {/* Plan Header */}
+              
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="text-white text-lg font-medium leading-7 font-sans">School/Institution</div>
@@ -357,7 +357,7 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Right Decorative Pattern */}
+          
           <div className="w-12 self-stretch relative overflow-hidden hidden md:block">
             <div className="w-[162px] left-[-58px] top-[-120px] absolute flex flex-col justify-start items-start">
               {Array.from({ length: 200 }).map((_, i) => (
@@ -373,3 +373,4 @@ export default function PricingSection() {
     </div>
   )
 }
+

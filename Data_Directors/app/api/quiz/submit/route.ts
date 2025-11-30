@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from "next/server"
+﻿import { NextRequest, NextResponse } from "next/server"
 
 interface QuizSubmission {
   quizId: string
   userId: string
-  answers: Record<string, number> // questionId -> selectedOptionIndex
-  timeSpent: number // in seconds
+  answers: Record<string, number> 
+  timeSpent: number 
   documentId?: string
 }
 
@@ -50,8 +50,8 @@ export async function POST(request: NextRequest) {
 
     const explanations: Record<string, string> = {
       q_1: "Newton's Second Law states that F = ma, meaning force is directly proportional to mass and acceleration.",
-      q_2: "Using F = ma, we get F = 5 kg × 2 m/s² = 10 N",
-      q_3: "Kinetic energy is proportional to velocity squared (KE = ½mv²). If velocity doubles, KE increases by a factor of 4.",
+      q_2: "Using F = ma, we get F = 5 kg Ã— 2 m/sÂ² = 10 N",
+      q_3: "Kinetic energy is proportional to velocity squared (KE = Â½mvÂ²). If velocity doubles, KE increases by a factor of 4.",
       q_4: "Speed is a scalar quantity (magnitude only), while velocity, acceleration, and force are vectors (magnitude and direction).",
       q_5: "In an elastic collision, both momentum and kinetic energy are conserved.",
     }
@@ -71,17 +71,17 @@ export async function POST(request: NextRequest) {
     const correctCount = breakdown.filter((q) => q.correct).length
     const totalQuestions = Object.keys(correctAnswers).length
     const percentage = Math.round((correctCount / totalQuestions) * 100)
-    const passed = percentage >= 60 // 60% passing score
+    const passed = percentage >= 60 
 
-    let pointsEarned = correctCount * 10 // 10 points per correct answer
-    if (passed) pointsEarned += 20 // Bonus for passing
-    if (percentage >= 90) pointsEarned += 30 // Extra bonus for excellent performance
-    if (timeSpent < 300) pointsEarned += 10 // Speed bonus (completed in under 5 minutes)
+    let pointsEarned = correctCount * 10 
+    if (passed) pointsEarned += 20 
+    if (percentage >= 90) pointsEarned += 30 
+    if (timeSpent < 300) pointsEarned += 10 
 
     const achievements: string[] = []
-    if (percentage === 100) achievements.push("Perfect Score! 🎯")
-    if (percentage >= 90) achievements.push("Quiz Master 🏆")
-    if (timeSpent < 180) achievements.push("Speed Demon ⚡")
+    if (percentage === 100) achievements.push("Perfect Score! ðŸŽ¯")
+    if (percentage >= 90) achievements.push("Quiz Master ðŸ†")
+    if (timeSpent < 180) achievements.push("Speed Demon âš¡")
 
     await new Promise((resolve) => setTimeout(resolve, 500))
 
@@ -159,4 +159,5 @@ export async function GET(request: NextRequest) {
     totalQuizzes: mockHistory.length,
   })
 }
+
 

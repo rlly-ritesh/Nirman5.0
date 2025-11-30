@@ -1,28 +1,23 @@
-import type React from "react"
+﻿import type React from "react"
 
 interface NumbersThatSpeakProps {
-  /** Fixed width from Figma: 482px */
+  
   width?: number | string
-  /** Fixed height from Figma: 300px */
+  
   height?: number | string
-  /** Optional className to pass to root */
+  
   className?: string
-  /** Theme palette */
+  
   theme?: "light" | "dark"
 }
 
-/**
- * Numbers that speak – Financial dashboard with layered charts
- * Generated from Figma via MCP with exact measurements (482×300px)
- * Single-file component following the v0-ready pattern used in this repo.
- */
 const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
   width = 482,
   height = 300,
   className = "",
   theme = "dark",
 }) => {
-  // Design tokens (derived from Figma local variables)
+  
   const themeVars =
     theme === "light"
       ? {
@@ -42,7 +37,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
           "--nts-shadow": "rgba(47,48,55,0.06)",
         } as React.CSSProperties)
 
-  // Figma-exported assets
+  
   const imgSchedule = "/placeholder.svg?height=271&width=431"
   const imgYAxisLine = "/placeholder.svg?height=17&width=295"
   const imgYAxisLine1 = "/placeholder.svg?height=13&width=295"
@@ -65,7 +60,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
       data-name="Numbers that speak"
       data-node-id="454:5856"
     >
-      {/* Root positioning container - exact match to Figma */}
+      
       <div
         style={{
           position: "absolute",
@@ -74,7 +69,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
           top: "calc(50% + 23.703px)",
         }}
       >
-        {/* Small dashboard card - back layer */}
+        
         <div
           style={{
             position: "absolute",
@@ -113,7 +108,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
           </div>
         </div>
 
-        {/* Medium dashboard card - middle layer */}
+        
         <div
           style={{
             position: "absolute",
@@ -152,7 +147,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
           </div>
         </div>
 
-        {/* Large dashboard card - front layer with full content */}
+        
         <div
           style={{
             position: "absolute",
@@ -230,7 +225,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                         flexGrow: 1,
                       }}
                     >
-                      {/* Header Section */}
+                      
                       <div
                         style={{
                           display: "flex",
@@ -278,7 +273,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                         </div>
                       </div>
 
-                      {/* Chart Container */}
+                      
                       <div
                         style={{
                           display: "flex",
@@ -296,7 +291,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                             width: "100%",
                           }}
                         >
-                          {/* Chart Axis */}
+                          
                           <div
                             style={{
                               position: "absolute",
@@ -317,7 +312,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                                 position: "relative",
                               }}
                             >
-                              {/* Y-Axis Labels */}
+                              
                               <div
                                 style={{
                                   display: "flex",
@@ -376,7 +371,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                                 </div>
                               </div>
 
-                              {/* Grid Lines and X-Axis */}
+                              
                               <div
                                 style={{
                                   display: "flex",
@@ -387,7 +382,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                                   justifyContent: "flex-start",
                                 }}
                               >
-                                {/* Grid Lines */}
+                                
                                 <div
                                   style={{
                                     display: "flex",
@@ -442,7 +437,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                                   </div>
                                 </div>
 
-                                {/* X-Axis Labels */}
+                                
                                 <div
                                   style={{
                                     display: "flex",
@@ -469,7 +464,7 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
                             </div>
                           </div>
 
-                          {/* Chart Data Bars */}
+                          
                           <div
                             style={{
                               position: "absolute",
@@ -538,3 +533,4 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
 }
 
 export default NumbersThatSpeak
+

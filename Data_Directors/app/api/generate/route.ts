@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server"
+﻿import { NextRequest, NextResponse } from "next/server"
 
 interface GenerateRequest {
   documentId: string
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
         "Energy is conserved in closed systems",
         "Momentum is the product of mass and velocity",
       ],
-      readingTime: 3, // minutes
+      readingTime: 3, 
     }
 
     const mockFlashcards = {
@@ -46,13 +46,13 @@ export async function POST(request: NextRequest) {
         {
           id: "fc_2",
           front: "Define acceleration",
-          back: "Acceleration is the rate of change of velocity with respect to time. It is measured in m/s².",
+          back: "Acceleration is the rate of change of velocity with respect to time. It is measured in m/sÂ².",
           difficulty: "medium",
         },
         {
           id: "fc_3",
           front: "What is the formula for momentum?",
-          back: "Momentum (p) = mass (m) × velocity (v). It is a vector quantity measured in kg⋅m/s.",
+          back: "Momentum (p) = mass (m) Ã— velocity (v). It is a vector quantity measured in kgâ‹…m/s.",
           difficulty: "medium",
         },
         {
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
       type: "quiz",
       title: "Physics Fundamentals Quiz",
       difficulty,
-      timeLimit: 600, // seconds
+      timeLimit: 600, 
       questions: [
         {
           id: "q_1",
@@ -86,10 +86,10 @@ export async function POST(request: NextRequest) {
         },
         {
           id: "q_2",
-          question: "A 5 kg object accelerates at 2 m/s². What is the net force acting on it?",
+          question: "A 5 kg object accelerates at 2 m/sÂ². What is the net force acting on it?",
           options: ["5 N", "7 N", "10 N", "2.5 N"],
           correctAnswer: 2,
-          explanation: "Using F = ma, we get F = 5 kg × 2 m/s² = 10 N",
+          explanation: "Using F = ma, we get F = 5 kg Ã— 2 m/sÂ² = 10 N",
           difficulty: "medium",
         },
         {
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
             "It remains the same",
           ],
           correctAnswer: 2,
-          explanation: "Kinetic energy is proportional to velocity squared (KE = ½mv²). If velocity doubles, KE increases by a factor of 4.",
+          explanation: "Kinetic energy is proportional to velocity squared (KE = Â½mvÂ²). If velocity doubles, KE increases by a factor of 4.",
           difficulty: "hard",
         },
         {
@@ -171,4 +171,5 @@ export async function GET(request: NextRequest) {
     message: "Use POST to generate new content",
   })
 }
+
 

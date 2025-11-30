@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import React, { useState } from "react"
 import Link from "next/link"
@@ -17,7 +17,7 @@ export default function DocumentsPage() {
       status: "completed",
       flashcards: 45,
       quizzes: 3,
-      thumbnail: "📘",
+      thumbnail: "ðŸ“˜",
     },
     {
       id: "2",
@@ -28,7 +28,7 @@ export default function DocumentsPage() {
       status: "completed",
       flashcards: 62,
       quizzes: 5,
-      thumbnail: "🧪",
+      thumbnail: "ðŸ§ª",
     },
     {
       id: "3",
@@ -39,7 +39,7 @@ export default function DocumentsPage() {
       status: "completed",
       flashcards: 38,
       quizzes: 4,
-      thumbnail: "📐",
+      thumbnail: "ðŸ“",
     },
     {
       id: "4",
@@ -50,7 +50,7 @@ export default function DocumentsPage() {
       status: "completed",
       flashcards: 71,
       quizzes: 6,
-      thumbnail: "🏛️",
+      thumbnail: "ðŸ›ï¸",
     },
   ]
 
@@ -74,7 +74,7 @@ export default function DocumentsPage() {
           href="/dashboard/upload"
           className="btn-3d-orange px-6 py-3 rounded-full font-semibold inline-block text-center"
         >
-          📤 Upload New PDF
+          ðŸ“¤ Upload New PDF
         </Link>
       </div>
 
@@ -83,7 +83,7 @@ export default function DocumentsPage() {
         <div className="flex-1">
           <input
             type="text"
-            placeholder="🔍 Search documents..."
+            placeholder="ðŸ” Search documents..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-all"
@@ -112,7 +112,7 @@ export default function DocumentsPage() {
               <div className="text-5xl">{doc.thumbnail}</div>
               <div className="flex gap-2">
                 <button className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all">
-                  ⋮
+                  â‹®
                 </button>
               </div>
             </div>
@@ -126,15 +126,15 @@ export default function DocumentsPage() {
             
             <div className="flex gap-4 mb-4 text-sm">
               <div className="flex items-center gap-1 text-gray-400">
-                <span>🃏</span>
+                <span>ðŸƒ</span>
                 <span>{doc.flashcards}</span>
               </div>
               <div className="flex items-center gap-1 text-gray-400">
-                <span>📝</span>
+                <span>ðŸ“</span>
                 <span>{doc.quizzes}</span>
               </div>
               <div className="flex items-center gap-1 text-gray-400">
-                <span>📦</span>
+                <span>ðŸ“¦</span>
                 <span>{doc.size}</span>
               </div>
             </div>
@@ -153,13 +153,13 @@ export default function DocumentsPage() {
                 href={`/dashboard/documents/${doc.id}/flashcards`}
                 className="btn-3d-orange-secondary px-4 py-2 rounded-lg text-sm text-center font-medium"
               >
-                🃏 Flashcards
+                ðŸƒ Flashcards
               </Link>
               <Link
                 href={`/dashboard/documents/${doc.id}/quiz`}
                 className="btn-3d-orange-secondary px-4 py-2 rounded-lg text-sm text-center font-medium"
               >
-                📝 Quiz
+                ðŸ“ Quiz
               </Link>
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function DocumentsPage() {
       
       {filteredDocuments.length === 0 && (
         <div className="dark-card p-12 rounded-xl text-center">
-          <div className="text-6xl mb-4">📭</div>
+          <div className="text-6xl mb-4">ðŸ“­</div>
           <h3 className="text-xl font-semibold text-white mb-2">No documents found</h3>
           <p className="text-gray-400 mb-6">
             {searchQuery ? "Try a different search term" : "Upload your first PDF to get started"}
@@ -179,7 +179,7 @@ export default function DocumentsPage() {
               href="/dashboard/upload"
               className="btn-3d-orange px-6 py-3 rounded-full font-semibold inline-block"
             >
-              📤 Upload PDF
+              ðŸ“¤ Upload PDF
             </Link>
           )}
         </div>
@@ -187,4 +187,5 @@ export default function DocumentsPage() {
     </div>
   )
 }
+
 

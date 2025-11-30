@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Flappy Bird</title>
+        <link rel="stylesheet" href="/flappy-bird/flappybird.css">
+        <script src="/flappy-bird/questions.js"></script>
+        <script src="/flappy-bird/flappybird.js"></script>
+    </head>
+    <body>
+        <div class="game-container">
+            <div class="score-display">Quiz Score: <span id="currentScore">0</span></div>
+            <canvas id="board"></canvas>
+            
+            <!-- Question Modal -->
+            <div id="questionModal" class="modal hidden">
+                <div class="modal-content">
+                    <h2 id="questionText"></h2>
+                    <div id="optionsContainer" class="options-container"></div>
+                    <div id="feedbackMessage" class="feedback-message"></div>
+                </div>
+            </div>
+            
+            <!-- Game Over Overlay -->
+            <div id="gameOverContainer" class="game-over-container hidden">
+                <div class="game-over-content">
+                    <h1>GAME OVER</h1>
+                    <p class="final-score">Quiz Score: <span id="finalScore">0</span></p>
+                    <p class="restart-instruction">Press SPACE, ARROW UP, or X to restart</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

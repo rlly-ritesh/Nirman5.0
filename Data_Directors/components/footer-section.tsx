@@ -1,15 +1,15 @@
-export default function FooterSection() {
+﻿export default function FooterSection() {
   return (
     <div className="w-full pt-10 flex flex-col justify-start items-start">
-      {/* Main Footer Content */}
+      
       <div className="self-stretch h-auto flex flex-col md:flex-row justify-between items-stretch pr-0 pb-8 pt-0">
         <div className="h-auto p-4 md:p-8 flex flex-col justify-start items-start gap-8">
-          {/* Brand Section */}
+          
           <div className="self-stretch flex justify-start items-center gap-3">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
               <img src="/logopng.png" alt="PadhAI Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="text-center text-white text-xl font-semibold leading-4 font-sans">
+            <div className="text-center text-white text-2xl font-semibold leading-4 font-sans">
               <span className="text-gradient-neon">PadhAI</span>
             </div>
           </div>
@@ -17,9 +17,9 @@ export default function FooterSection() {
             AI-powered learning made effortless
           </div>
 
-          {/* Social Media Icons */}
+          
           <div className="flex justify-start items-start gap-4">
-            {/* Twitter/X Icon */}
+            
             <div className="w-6 h-6 relative overflow-hidden">
               <div className="w-6 h-6 left-0 top-0 absolute flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@ export default function FooterSection() {
               </div>
             </div>
 
-            {/* LinkedIn Icon */}
+            
             <div className="w-6 h-6 relative overflow-hidden">
               <div className="w-6 h-6 left-0 top-0 absolute flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@ export default function FooterSection() {
               </div>
             </div>
 
-            {/* GitHub Icon */}
+            
             <div className="w-6 h-6 relative overflow-hidden">
               <div className="w-6 h-6 left-0 top-0 absolute flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,11 +57,11 @@ export default function FooterSection() {
           </div>
         </div>
 
-        {/* Navigation Links */}
+        
         <div className="self-stretch p-4 md:p-8 flex flex-col sm:flex-row flex-wrap justify-start sm:justify-between items-start gap-6 md:gap-8">
-          {/* Product Column */}
+          
 
-          {/* Product Column */}
+          
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
             <div className="self-stretch text-gray-500 text-sm font-medium leading-5 font-sans">
               Product
@@ -85,7 +85,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Company Column */}
+          
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
             <div className="text-gray-500 text-sm font-medium leading-5 font-sans">Company</div>
             <div className="flex flex-col justify-center items-start gap-2">
@@ -107,7 +107,7 @@ export default function FooterSection() {
             </div>
           </div>
 
-          {/* Resources Column */}
+          
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
             <div className="text-gray-500 text-sm font-medium leading-5 font-sans">Resources</div>
             <div className="flex flex-col justify-center items-center gap-2">
@@ -131,7 +131,7 @@ export default function FooterSection() {
         </div>
       </div>
 
-      {/* Bottom Section with Pattern */}
+      
       <div className="self-stretch h-12 relative overflow-hidden border-t border-b border-white/10">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <div className="w-full h-full relative">
@@ -153,3 +153,4 @@ export default function FooterSection() {
     </div>
   )
 }
+

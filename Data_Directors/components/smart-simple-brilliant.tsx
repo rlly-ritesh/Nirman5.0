@@ -1,16 +1,15 @@
-import type React from "react"
+﻿import type React from "react"
 
 interface SmartSimpleBrilliantProps {
-  /** Fixed width from Figma: 482px */
+  
   width?: number | string
-  /** Fixed height from Figma: 300px */
+  
   height?: number | string
-  /** Optional className to pass to root */
+  
   className?: string
-  /** Theme palette */
+  
   theme?: "light" | "dark"
 }
-
 
 const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
   width = 482,
@@ -18,7 +17,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
   className = "",
   theme = "dark",
 }) => {
-  // Design tokens (derived from Figma local variables)
+  
   const themeVars =
     theme === "light"
       ? {
@@ -36,7 +35,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
           "--ssb-shadow": "rgba(0,0,0,0.28)",
         } as React.CSSProperties)
 
-  // Figma-exported SVG assets used for small icons
+  
   const img = "http://localhost:3845/assets/1b1e60b441119fb176db990a3c7fe2670a764855.svg"
   const img1 = "http://localhost:3845/assets/a502f04ccfc3811f304b58a3a982a5b6fa070e91.svg"
   const img2 = "http://localhost:3845/assets/9c07375bf3b9f1f1d8a0a24447829eb6f54fa928.svg"
@@ -65,10 +64,10 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
           position: "relative",
           width: "295.297px",
           height: "212.272px",
-          transform: "scale(1.2)", // Added 1.2x scale transform
+          transform: "scale(1.2)", 
         }}
       >
-        {/* Left tilted card group */}
+        
         <div style={{ position: "absolute", left: "123.248px", top: "0px", width: 0, height: 0 }}>
           <div style={{ transform: "rotate(5deg)", transformOrigin: "center" }}>
             <div
@@ -80,7 +79,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                 boxShadow: "0px 0px 0px 1px rgba(0,0,0,0.08), 0px 2px 4px rgba(0,0,0,0.07)",
               }}
             >
-              {/* Amber event */}
+              
               <div
                 style={{
                   width: "100%",
@@ -120,7 +119,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                 </div>
               </div>
 
-              {/* Sky event */}
+              
               <div
                 style={{
                   width: "100%",
@@ -161,7 +160,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                 </div>
               </div>
 
-              {/* Emerald event */}
+              
               <div
                 style={{
                   width: "100%",
@@ -196,7 +195,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
           </div>
         </div>
 
-        {/* Right card */}
+        
         <div style={{ position: "absolute", left: "0px", top: "6.075px", width: "155.25px" }}>
           <div style={{ transform: "rotate(-5deg)", transformOrigin: "center" }}>
             <div
@@ -209,7 +208,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                   "-8px 6px 11.3px rgba(0,0,0,0.12), 0px 0px 0px 1px rgba(0,0,0,0.08), 0px 2px 4px rgba(0,0,0,0.06)",
               }}
             >
-              {/* Violet event */}
+              
               <div
                 style={{
                   width: "100%",
@@ -249,7 +248,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                 </div>
               </div>
 
-              {/* Rose event */}
+              
               <div
                 style={{
                   width: "100%",
@@ -285,12 +284,12 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </div>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#BE123C" }}>
-                    🍷 Happy Hour
+                    ðŸ· Happy Hour
                   </div>
                 </div>
               </div>
 
-              {/* Violet tall event */}
+              
               <div
                 style={{
                   width: "100%",
@@ -317,7 +316,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </span>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#581C87" }}>
-                    🍔 New Employee Welcome Lunch!
+                    ðŸ” New Employee Welcome Lunch!
                   </div>
                 </div>
               </div>
@@ -330,3 +329,4 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
 }
 
 export default SmartSimpleBrilliant
+
